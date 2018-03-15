@@ -18,6 +18,8 @@ $(document).ready(function(){
      document.removeEventListener('click', enableNoSleep, false);
    }
 
+   document.addEventListener('touchstart', enableNoSleep, false);
+   
    var workTime = 600;
    var breakTime = 300;
    $("#workSet").html("<h2>" + convertTime(workTime) + "</h2>");
