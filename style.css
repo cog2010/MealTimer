@@ -23,10 +23,3 @@ body{
 p{
   font-weight: 100;
 }
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    max-width: 0%;
-    max-height: 0%;
-}

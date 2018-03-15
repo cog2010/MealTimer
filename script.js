@@ -3,7 +3,7 @@ A timer that counts down from 25 minutes then times a 5 minute break.
 The clock will count down through the work/break interval
    then be ready to start again.
 The durations on the clock can be customized.*/
-import NoSleep from "NoSleep.js";
+
 
 $(document).ready(function(){
    $("#eatTimer").hide();
@@ -18,8 +18,11 @@ $(document).ready(function(){
      document.removeEventListener('click', enableNoSleep, false);
    }
 
-   document.addEventListener('touchstart', enableNoSleep, false);
+   $("#startButton").on("click",function(){
+     noSleep.enable();
+   })
 
+/*
    var workTime = 600;
    var breakTime = 300;
    $("#workSet").html("<h2>" + convertTime(workTime) + "</h2>");
@@ -28,6 +31,8 @@ $(document).ready(function(){
    var workStart = $("#workStart")[0];
    var breakStart = $("#breakStart")[0];
    var breakEnd = $("#breakEnd")[0];
+
+
 
    $("#start").on("click", function(){
       workStart.play();
@@ -97,5 +102,5 @@ $(document).ready(function(){
          breakTime += 60;
          $("#breakSet").html("<h2>" + convertTime(breakTime) + "</h2>");
 
-   });
+   });*/
 });
